@@ -13,4 +13,5 @@ setup(
 	install_requires=['selenium'],
 	classifiers = [],
 	scripts=['bin/awesome-bing'],
+	license='MIT'
 )
