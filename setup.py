@@ -10,5 +10,7 @@ setup(
 	url = "https://github.com/v-adhithyan/awesome-bing",
 	download_url = "https://github.com/v-adhithyan/awesome-bing/tarball/0.1",
 	keywords = [ 'bing', 'wallpaper', 'download'],
+	install_requires=['selenium'],
 	classifiers = [],
+	scripts=['bin/awesome-bing'],
 )
