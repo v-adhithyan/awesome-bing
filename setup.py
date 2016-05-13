@@ -1,14 +1,14 @@
 from distutils.core import setup
 
 setup(
-	name = "awesome-bing",
-	package = ["awesome-bing"],
-	version = 0.1,
+	name = "awesome_bing",
+	packages = ["awesome_bing"],
+	version = '0.1',
 	description = "A python utility to view today's bing wallpaper, its information and set as wallpaper",
 	author = "Adhithyan V",
-	email = "aavispeaks@gmail.com",
+	author_email = "aavispeaks@gmail.com",
 	url = "https://github.com/v-adhithyan/awesome-bing",
-	download_url = "https://github.com",
+	download_url = "https://github.com/v-adhithyan/awesome-bing/tarball/0.1",
 	keywords = [ 'bing', 'wallpaper', 'download'],
-	classifiers = []
+	classifiers = [],
 )
