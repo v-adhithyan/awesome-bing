@@ -37,8 +37,12 @@ def get_pic_directory():
 
 def set_wallpaper(fname):
 	os_name = get_os_name().lower()
+	wallpaper_not_set = "Unable to set as wallpaper. Please try after sometime."
 
 	if os_name == "darwin":
-		os.system('osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + fname + '"\'')
+		try:
+			os.system('osascript -e \'tell application "Finder" to set desktop picture to POSIX file "' + str(fname) + '"\'')
+		except:
+			print wallpaper_not_set
 	else:
 		print "Currently Unsupported."

@@ -5,6 +5,7 @@ from awesome_bing import osutil
 import sys
 
 arguements_length = len(sys.argv)
+oops = "Oops! unable to recognize the option. Please type \"awesome-bing help\" without quotes to get help."
 
 if arguements_length == 1:
 	print awesome_bing.help()
@@ -14,10 +15,11 @@ elif arguements_length == 2:
 	if option == "help":
 		print awesome_bing.help()
 	elif option == "info":
-		print awesome_bing.info()
-	elif option =="getset":
+		print str(awesome_bing.info()).replace("None", "")
+		print "\n"
+	elif option == "set":
 		print awesome_bing.getset()
 	else:
-		print awesome_bing.pic_dir()
+		print oops
 else:
-	print "Oops! Cannot recognize the given option. \nTIP: Type awesome_bing help to know the usage."
+	print oops

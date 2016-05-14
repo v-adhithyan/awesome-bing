@@ -2,7 +2,7 @@ import datetime
 import osutil
 import os
 
-fname = osutil.get_home_directory() + os.path.sep + ".awesomeutil.txt"
+fname = osutil.get_home_directory() + os.path.sep + ".awesome-bing.txt"
 
 def today_set():
 	today = str(datetime.date.today())
@@ -21,8 +21,12 @@ def set_today_and_info(content):
 	file.close()
 
 def get_todays_info():
-	withopen(fname, "r")
+	file = open(fname, "r")
 	content = file.read()
 	file.close()
 
-	return content
+	return str(content)
+
+def get_info():
+	today = str(datetime.date.today())
+	return get_todays_info().replace(today, "")

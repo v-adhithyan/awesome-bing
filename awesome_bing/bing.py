@@ -68,3 +68,14 @@ def get_info(today, driver):
 			raise
 			print try_later
 
+def info():
+	if not awesomeutil.today_set():
+		driver = webdriver.Firefox()
+		driver.get(bing)
+		today = str(datetime.date.today())
+
+		get_info(today, driver)
+
+		driver.quit
+
+	print awesomeutil.get_info()
