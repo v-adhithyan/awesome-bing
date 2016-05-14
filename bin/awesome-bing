@@ -18,7 +18,7 @@ elif arguements_length == 2:
 		print str(awesome_bing.info()).replace("None", "")
 		print "\n"
 	elif option == "set":
-		print awesome_bing.getset()
+		print awesome_bing.set()
 	else:
 		print oops
 else:
