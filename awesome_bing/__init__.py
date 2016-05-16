@@ -1,5 +1,6 @@
 import bing
 import osutil
+import awesomeutil
 
 def help():
     return """** awesome-bing **\n
@@ -13,6 +14,9 @@ def info():
     bing.info()
 
 def set():
-	fname = bing.download_image()
-	print "Setting the downloaded image as wallpaper .."
-	osutil.set_wallpaper(fname)
+    if not awesomeutil.today_set():
+	   fname = bing.download_image()
+	   print "Setting the downloaded image as wallpaper .."
+	   osutil.set_wallpaper(fname)
+    else:
+        print "Today's bing image has been set as wallpaper already."
