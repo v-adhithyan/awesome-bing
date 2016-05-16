@@ -26,7 +26,7 @@ def click_element(driver, element_name):
 def download_image():
 	try:
 		if not awesomeutil.today_set():
-			driver = webdriver.Firefox()
+			driver = webdriver.PhantomJS()
 			driver.get(bing)
 
 			bg_div = driver.find_element_by_xpath("//div[@id='bgDiv']")
@@ -70,7 +70,7 @@ def get_info(today, driver):
 
 def info():
 	if not awesomeutil.today_set():
-		driver = webdriver.Firefox()
+		driver = webdriver.PhantomJS()
 		driver.get(bing)
 		today = str(datetime.date.today())
 
